@@ -1,0 +1,13 @@
+{
+  "name": "deploy-node",
+  "version": "1.0.0",
+  "description": "CloudInit script to deploy node on Linux",
+  "main": "index.js",
+  "author": "Mike MacCana <mike@certsimple.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dedent-js": "^1.0.1",
+    "yamljs": "^0.3.0"
+  }
+}
