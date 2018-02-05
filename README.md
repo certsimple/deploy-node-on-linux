@@ -7,15 +7,19 @@ Automatically deploys a node app using [Cloud Init](http://cloudinit.readthedocs
  - [Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/using-cloud-init)
  - [Google Cloud](https://cloud.google.com/container-optimized-os/docs/how-to/create-configure-instance#using_cloud-init)
 
+## Installation
+
+Just `git clone` this repo and run `yarn install` (or `npm install`) to fetch dependencies.
+
 ## Usage
 
 Edit `config.js` and run `node make-cloud-init.js` to output a cloud Config
 
-See [https://certsimple.com/blog/deploy-node-on-linux](CertSimple's Deploy Node on Linux guide) for full documentation.  
+See [CertSimple's Deploy Node on Linux guide](https://certsimple.com/blog/deploy-node-on-linux) for full documentation.  
 
 ## We welcome forks and changes!
 
-This is the first release. Bug reports are good, but pull requests are better. 🙂 
+This is the first release of the Cloud Config generator. Bug reports are good, but pull requests are better. 🙂 
 
 ## Credits
 
