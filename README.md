@@ -21,7 +21,7 @@ You might wish to check the output of the Cloud Init in `/var/log/cloud-init-out
 
 After the box is built, SSH in as your chosen user, on your chosen port, and add `/root/.ssh/id_dsa.pub` as a deploy key to your project on GitHub / GitLab.
 
-You now have a fully deployed box and can `git clone` your project there, and start your app with `systemctl start (app name)`.
+You now have a fully deployed box and can `git clone` your project there, run `yarn install`, and start your app with `systemctl start (app name)`.
 
 See [CertSimple's Deploy Node on Linux guide](https://certsimple.com/blog/deploy-node-on-linux) for full documentation.  
 
