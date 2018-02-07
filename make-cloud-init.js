@@ -1,10 +1,14 @@
 const YAML = require('yamljs'),
 	fs = require('fs'),
-	config = require('./config.js'),
 	dedent = require('dedent-js'),
 	log = console.log.bind(console);
 
-const FILENAME = 'cloud-config.yaml'
+const INPUT_FILE = process.argv[2] || './config.js',
+	OUTPUT_FILE = 'cloud-config.yaml'
+
+log(`Loading config file ${INPUT_FILE}`)
+
+const config = require(INPUT_FILE);
 
 // null should work but doesn't, so pick a stupidly high number
 const DONT_GENERATE_INLINE_YAML = 1000,
@@ -111,8 +115,8 @@ const cloudInit = {
 const contents = YAML.stringify(cloudInit, DONT_GENERATE_INLINE_YAML, INDENTATION)
 
 // Each cloud-config file must begin with #cloud-config alone on the very first line
-fs.writeFileSync(FILENAME, `#cloud-config\n${contents}`)
+fs.writeFileSync(OUTPUT_FILE, `#cloud-config\n${contents}`)
 
-log(`Saved ${FILENAME}.`)
+log(`Saved ${OUTPUT_FILE}.`)
 
 

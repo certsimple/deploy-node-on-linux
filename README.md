@@ -13,7 +13,15 @@ Just `git clone` this repo and run `yarn install` (or `npm install`) to fetch de
 
 ## Usage
 
-Edit `config.js` and run `node make-cloud-init.js` to output a cloud Config
+Edit `config.js` and run `node make-cloud-init.js` to output a Cloud Init file.
+
+Start an instance (via API or manually) on your cloud provider and specify the Cloud Init file as **User Data**.
+
+You might wish to check the output of the Cloud Init in `/var/log/cloud-init-output.log`.
+
+After the box is built, SSH in as your chosen user, on your chosen port, and add `/root/.ssh/id_dsa.pub` as a deploy key to your project on GitHub / GitLab.
+
+You now have a fully deployed box and can `git clone` your project there, and start your app with `systemctl start (app name)`.
 
 See [CertSimple's Deploy Node on Linux guide](https://certsimple.com/blog/deploy-node-on-linux) for full documentation.  
 
@@ -23,5 +31,5 @@ This is the first release of the Cloud Config generator. Bug reports are good, b
 
 ## Credits
 
-Deploy Node on Linux is created by [Fast, painless EV HTTPS](https://certsimple.com) provider [CertSimple](https://certsimple.com). If you want to verify your identity online, give us a try!
+Deploy Node on Linux is created by [Fast, painless EV HTTPS](https://certsimple.com) provider [CertSimple](https://certsimple.com). If you want to verify who runs your website, we do it better than anyone else!
 
