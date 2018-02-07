@@ -19,7 +19,7 @@ Start an instance (via API or manually) on your cloud provider and specify the C
 
 You might wish to check the output of the Cloud Init in `/var/log/cloud-init-output.log`.
 
-After the box is built, SSH in as your chosen user, on your chosen port, and add `/root/.ssh/id_dsa.pub` as a deploy key to your project on GitHub / GitLab.
+After the box is built, SSH in as your chosen user, on your chosen port, and add `~/.ssh/id_dsa.pub` as a deploy key to your project on GitHub / GitLab.
 
 You now have a fully deployed box and can `git clone` your project there, run `yarn install`, and start your app with `systemctl start (app name)`.
 
